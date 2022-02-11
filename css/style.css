@@ -1,0 +1,137 @@
+section {
+    /* ! Everything below is needed ! */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+section:target {
+    /* Show section */
+    display: block;
+}
+
+section#login {
+    /* Show #home by default */
+    display: block;
+    font-family: Helvetica, "Helvetica Nueue", Arial, sans-serif;
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: block;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.action.type-primary {
+    background-color: #f78c25;
+    border-color: #b78142;
+    color: rgb(100%, 100%, 100%);
+}
+
+.action {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto 1.5em auto;
+    max-width: none;
+    padding: 1.35em 2em;
+    width: 100%;
+    border: 0;
+    border-bottom: 0.125em solid;
+    border-radius: 0.5625em;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 120ms background-color ease-out;
+}
+
+h1 {
+    margin-bottom: 0.3em;
+}
+
+h1 {
+    color: rgb(245, 245, 245);
+    margin: 0.67em 0;
+    font-size: 1.875rem;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+div#login-form {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(32, 38, 48, 0.9) !important;
+    padding: 1.5rem 1.275rem;
+    border: 0;
+    border-radius: 0.5625em;
+}
+
+p {
+    margin: 2.5em 0;
+    color: rgb(205, 205, 205);
+}
+
+.std-form label {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0.85em;
+    cursor: default;
+}
+
+.std-form .label-text,
+.std-form fieldset>legend {
+    flex: 1 0 auto;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.std-form input,
+.std-form select,
+.std-form textarea {
+    box-sizing: border-box;
+    height: 3.4em;
+    padding: 0.8em 1em;
+    width: 100%;
+    border: 0.1em solid #a5a2a2;
+    font-size: 1em;
+    line-height: 1.8;
+    background: rgb(100%, 100%, 100%);
+    transition: padding 0.1s ease-out, border-color 0.1s ease-out;
+}
+
+login-logo#img {
+    background-color: rgb(245, 245, 245);
+    width: 50%;
+}
