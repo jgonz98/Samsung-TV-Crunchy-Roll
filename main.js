@@ -115,5 +115,25 @@ function main() {
     getToken();
     localStorage.setItem("session_id", tokenResponse["data"]["session_id"]);
     document.getElementById("login_form__token").value = localStorage.getItem("session_id");
-
 }
+
+$(document).ready(function() {
+    main();
+});
+
+var myApp = angular.module('myApp', ['caph.focus']);
+var currentEvent;
+myApp.controller('myController', function($scope) {
+  	$scope.focus = function($event) {
+  		$event.currentTarget.firstElementChild.focus();
+  		$($event.currentTarget.firstElementChild).css({
+  			border: '5px solid red'
+  		});
+  	}
+  	$scope.blur = function($event) {
+  		$event.currentTarget.firstElementChild.blur();
+  		$($event.currentTarget.firstElementChild).css({
+  			border: ''
+  		});
+  	}
+});
